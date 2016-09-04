@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pure Js Utility</title>
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script type="text/javascript" src="js/js-utility.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="tab-switch display-wrapper">
+				<h2 class="heading">Navigation Tabs</h2>
+				<p class="description">
+					Navigation Tab switch using <b><i>Vanilla JavaScript.</i></b>
+				</p>
+				<ul class="tabs" id="menu">
+	        <li><a href="#" class="active tablink" onclick="switchTab(event, 'Tab1')"><b>Tab 1</b></a></li>
+	        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab2')"><b>Tab 2</b></a></li>
+	        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab3')"><b>Tab 3</b></a></li>
+	        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab4')"><b>Tab 4</b></a></li>
+	        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab5')"><b>Tab 5</b></a></li>
+	        <li><a href="#" class="tablink" onclick="switchTab(event, 'Tab6')"><b>Tab 6</b></a></li>
+      	</ul>
+			</div>
+			<div class="tab-switch-content">
+				<div class="content-wrapper tabcontent" id="Tab1">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>FIRST</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="content-wrapper tabcontent" id="Tab2">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>SECOND</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="content-wrapper tabcontent" id="Tab3">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>THIRD</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="content-wrapper tabcontent" id="Tab4">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>FOURTH</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="content-wrapper tabcontent" id="Tab5">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>FIFTH</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="content-wrapper tabcontent" id="Tab6">
+					<div id="tog-class" class="text-area">
+						<span>
+							<h3>Switched Tab Content</h3>
+							<p>
+								This is the <b>SIXTH</b> TAB.
+							</p>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal display-wrapper">
+				<h2 class="heading">Modal Popup</h2>
+				<p class="description">
+					Modal popup using <b><i>Vanila JavaScript</i></b>
+				</p>
+				<button type="button" class="btn" onclick="triggerModal()">Modal Popup</button>
+				<div id="overlay" class="overlay "></div>
+				<div id="modal-screen" class="modal-screen ">
+					<div class="modal-header">
+						<h2>This is the modal screen Header</h2>
+					</div>
+					<div class="modal-body">
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							when an unknown printer took a galley of type and scrambled it to make a type
+							specimen book. It has survived not only five centuries,
+							but also the leap into electronic typesetting, remaining essentially unchanged.
+							It was popularised in the 1960s with the release of Letraset sheets containing
+							Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+							PageMaker including versions of Lorem Ipsum.
+						</p>
+					</div>
+					<div class="modal-footer">
+							<button type="button" class="btn" onclick="closeModal()">Close</button>
+					</div>
+				</div>
+			</div>
+			<div class="dropdown-wrapper display-wrapper">
+				<h2 class="heading">Dropdown Menus</h2>
+				<p class="description">
+					On click drop down list of options using <b><i>Vanila JavaScript</i></b>
+				</p>
+				<div class="dropdown-click">
+					<button type="button" class="btn dropdown-toggle" onclick="dropDownToggle('drop-one')">Click to Drop<i class="fa fa-caret-down"></i></button>
+					<ul id="drop-one" class="dropdown-content">
+						<li>HTML</li>
+						<li>CSS3</li>
+						<li>SASS</li>
+						<li>JavaScript</li>
+					</ul>
+				</div>
+				<div class="dropdown-click">
+					<button type="button" class="btn dropdown-toggle" onclick="dropDownToggle('drop-two')">Click to Drop<i class="fa fa-caret-down"></i></button>
+					<ul id="drop-two" class="dropdown-content">
+						<li>HTML</li>
+						<li>CSS3</li>
+						<li>SASS</li>
+						<li>JavaScript</li>
+					</ul>
+				</div>
+				<div class="dropdown-click">
+					<button type="button" class="btn dropdown-toggle" onclick="dropDownToggle('drop-three')">Click to Drop<i class="fa fa-caret-down"></i></button>
+					<ul id="drop-three" class="dropdown-content">
+						<li>HTML</li>
+						<li>CSS3</li>
+						<li>SASS</li>
+						<li>JavaScript</li>
+					</ul>
+				</div>
+			</div>
+			<div class="collapse-wrapper display-wrapper">
+				<h2 class="heading">Collapsing Elements</h2>
+				<p class="description">
+					Collapsing Element, on click using <b><i>Vanila JavaScript</i></b>
+				</p>
+				<div class="collapse">
+					<div class="collapse-click">
+						<button type="button" id="collapse-toggle" class="btn" onclick="collapseToggle('collapse1')">Click To Collapse!</button>
+					</div>
+					<div id="collapse1" class="collapse-data">
+						<p class="collapse-text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries,
+						</p>
+					</div>
+				</div>
+				<div class="collapse">
+					<div class="collapse-click">
+						<button type="button" id="collapse-toggle" class="btn" onclick="collapseToggle('collapse2')">Click To Collapse!</button>
+					</div>
+					<div id="collapse2" class="collapse-data">
+						<p class="collapse-text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries,
+						</p>
+					</div>
+				</div>
+				<div class="collapse">
+					<div class="collapse-click">
+						<button type="button" id="collapse-toggle" class="btn" onclick="collapseToggle('collapse3')">Click To Collapse!</button>
+					</div>
+					<div id="collapse3" class="collapse-data">
+						<p class="collapse-text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							It has survived not only five centuries,
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

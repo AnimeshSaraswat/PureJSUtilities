@@ -1,0 +1,233 @@
+/* Variable Declaration */
+$color-white: #fff;
+$act-txt-color: #eee;
+$act-bg-color: #69B0A5;
+$tab-txt-color: #333;
+$border-color: #bbb;
+
+
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+html,body {
+  margin: 0px;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  .wrapper {
+    width: 900px;
+    margin: 50px auto;
+    .display-wrapper {
+      padding: 20px;
+      border-bottom: 1px solid $border-color;
+    }
+    .tab-switch {
+      border: none;
+    }
+    .heading {
+      margin: 0px;
+    }
+    .description {
+      margin: 6px 0px 10px;
+    }
+    .tabs {
+      text-align: center;
+    }
+    ul {
+      li {
+        display: inline-block;
+        width: 15%;
+        a {
+          text-align: center;
+          display: inline-block;
+          width: 100%;
+          padding: 20px;
+        }
+        a.active {
+          background-color: $act-bg-color;
+          color: $act-txt-color;
+        }
+        a.active:hover {
+          color: $color-white;
+        }
+        a {
+          color: $tab-txt-color;
+          border-radius: 5px;
+        }
+        a:hover {
+          color: $act-bg-color;
+        }
+      }
+    }
+    .tab-switch-content {
+      position: relative;
+      border-bottom: 1px solid $border-color;
+      .tabcontent {
+        display: none;
+        .text-area {
+          position: relative;
+          background: lightsteelblue;
+          color: $color-white;
+          width: 200px;
+          min-height: 200px;
+          margin: 0px auto 20px;
+          text-align: center;
+          border-radius: 50%;
+          transition: transform 3s ease-in-out;
+          // left: 350px;
+          span {
+            display: block;
+            text-align: center;
+            padding: 33px;
+          }
+        }
+        .trans {
+          transform: translate(350px, 0px) rotate(360deg);
+        }
+      }
+      .tabcontent:nth-child(1) {
+        display: block;
+      }
+    }
+    .btn {
+      // margin-left: 35px;
+      padding: 10px 20px;
+      color: #eee;
+      background: $act-bg-color;
+      border-radius: 5px;
+      border: none;
+    }
+    .btn:hover {
+      color: $color-white;
+      cursor: pointer;
+    }
+    .btn:focus {
+      outline: none;
+    }
+    .modal {
+      .overlay {
+        visibility: hidden;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(51, 51, 51, 0.6);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      .overlay.active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .modal-screen {
+        position: fixed;
+        width: 600px;
+        height: 400px;
+        visibility: hidden;
+        background: $color-white;
+        border-radius: 15px;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
+        opacity: 0;
+        transform: scale(0.6);
+        margin: -200px 0px 0px -300px;
+        transition: all 0.4s ease-in-out;
+        .modal-header {
+          h2 {
+            margin: 0px;
+            padding: 15px;
+            border-bottom: 1px solid $act-txt-color;
+          }
+        }
+        .modal-body {
+          padding: 15px;
+        }
+        .modal-footer {
+          position: absolute;
+          left: 15px;
+          right: 15px;
+          bottom: 10px;
+          text-align: right;
+          border-top: 1px solid $act-txt-color;
+          padding: 15px 15px 5px;
+        }
+      }
+      .modal-screen.active {
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .dropdown-wrapper {
+      .btn {
+        margin: 0px;
+      }
+      .dropdown-toggle {
+        display: inline;
+      }
+      .fa {
+        margin-left: 10px;
+      }
+      .dropdown-click {
+        display: inline-block;
+        margin-right: 25px;
+        .dropdown-content {
+          border: 1px solid $act-bg-color;
+          position: absolute;
+          width: 130px;
+          margin-top: 5px;
+          border-radius: 5px;
+          display: none;
+          background: $color-white;
+          li {
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 2.5;
+          }
+        }
+      }
+    }
+    .collapse {
+      margin-bottom: 10px;
+      .collapse-click {
+        .btn {
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+      }
+      .collapse-data {
+        height: 0px;
+        overflow: hidden;
+        margin: 0px;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        transition: all 0.4s ease-in-out;
+        border: 1px solid $color-white;
+        .collapse-text {
+          padding: 20px;
+          margin: 0px;
+          text-align: justify;
+        }
+      }
+      .collapse-data.active {
+        height: 100px;
+        border: 1px solid #eee;
+      }
+    }
+  }
+}
