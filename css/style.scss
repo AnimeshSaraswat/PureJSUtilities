@@ -22,6 +22,25 @@ a {
   text-decoration: none;
 }
 
+.header {
+  width: 100%;
+  min-height: 50px;
+  background-color: $act-bg-color;
+  .head-tag {
+    position: absolute;
+display: block;
+width: 15%;
+text-align: center;
+min-height: 30px;
+top: 51px;
+left: 82vw;
+color: $act-bg-color;
+border: 2px solid;
+border-bottom-right-radius: 15px;
+border-top-left-radius: 15px;
+  }
+}
+
 .container {
   width: 100%;
   .wrapper {
@@ -283,10 +302,19 @@ a {
           .prev {
             top: 30px;
             cursor: pointer;
+            background: $act-bg-color;
           }
           .next {
             @extend .prev;
             right: 0px;
+          }
+          .fa {
+            color: #ddd;
+          }
+          .prev:hover, .next:hover {
+            .fa {
+              color: $color-white;
+            }
           }
         }
         .offscreen {
